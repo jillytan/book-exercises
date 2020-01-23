@@ -5,6 +5,12 @@
 # Be sure to set your working directory in RStudio, and do NOT treat strings as 
 # factors!
 
+people[2, "height"]
+
+people[people$height == 69, "weight"]
+
+num_factors <-as.factor(c(10,10,20, 20, 30, 30, 30, 40, 40))
+
 
 # Use the View function to look at the loaded data
 
