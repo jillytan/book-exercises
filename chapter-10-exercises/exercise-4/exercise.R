@@ -5,15 +5,10 @@
 # Be sure to set your working directory in RStudio, and do NOT treat strings as 
 # factors!
 
-people[2, "height"]
-
-people[people$height == 69, "weight"]
-
-num_factors <-as.factor(c(10,10,20, 20, 30, 30, 30, 40, 40))
-
+grants <-read.csv('data/gates_money.csv', stringsAsFactors = FALSE)
 
 # Use the View function to look at the loaded data
-
+View(grants)
 
 # Create a variable `organization` that contains the `organization` column of 
 # the dataset
@@ -36,10 +31,19 @@ num_factors <-as.factor(c(10,10,20, 20, 30, 30, 30, 40, 40))
 
 
 # Which organization received the largest grant?
-
+grants$total_amount
+grants$organization
 
 # Which organization received the smallest grant?
+grants[grants$total_amount == min(grants$total_amount), c("organization", "total_amount")]
 
 
 # How many grants were awarded in 2010?
+nrow(grants[grants$start_year == "2010", ])
+
+#How much money was awarded in 2010?
+total_amount 
+start_year
+
+grants[grants$start_year == "2010"]
 
